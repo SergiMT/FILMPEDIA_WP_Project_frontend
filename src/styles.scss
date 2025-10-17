@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+/* Carga TODO Bootstrap y pasa overrides con `with(...)` */
+@use "bootstrap/scss/bootstrap" with (
+  $primary: #e94b35,
+  $border-radius: .75rem,
+  $font-size-base: 1rem,
+  $enable-rounded: true,
+  $enable-shadows: true,
+  
+);
+
+/* Tus utilidades/estilos encima o debajo, ya con el tema aplicado */
+.app-title { font-weight: 700; }
+
+body{
+    background-color: #FFFAFA;
+    
+}
+
+.section-header{
+  --accent: #eb705a;       /* cuadradito */
+  --dark-line: #111;       /* tramo oscuro */
+  --light-line: #999999;   /* tramo claro (usa gris de Bootstrap) */
+  --accent-len: 160px;     /* largo del tramo oscuro */
+  --line-h: 3px;
+  position: relative;
+  padding-bottom: .5rem;
+
+  /* línea inferior (oscuro + claro) */
+  &::after{
+    content:"";
+    position:absolute; left:0; right:0; bottom:0; height:var(--line-h);
+    background:
+      linear-gradient(to right, var(--dark-line) 0 var(--accent-len), var(--light-line) var(--accent-len) 100%);
+    border-radius: 999px;
+  }
+}
+
+.badge-dot{
+  width: .7rem; height: .7rem; border-radius: .2rem; 
+  background: var(--accent);
+  display:inline-block;
+}
+
+/* FADE negro de izq->der (del 85% opaco a 0%) */
+.bg-card .card-body::before{
+  content: "";
+  position: absolute;
+  inset: 0;                        /* top/right/bottom/left 0 */
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.85) 0%,
+    rgba(0,0,0,.55) 45%,
+    rgba(0,0,0,0) 75%
+  );
+  z-index: 0;                      /* por debajo del contenido */
+  pointer-events: none;
+  border-radius: 12px;          /* respeta esquinas redondas */
+}
+
+/* Asegura que el texto quede por encima del overlay */
+.bg-card .card-body > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Opcional: en móvil, más opaco para mejorar legibilidad */
+@media (max-width: 767.98px){
+  .bg-card .card-body::before{
+    background: linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.75));
+  }
+}
