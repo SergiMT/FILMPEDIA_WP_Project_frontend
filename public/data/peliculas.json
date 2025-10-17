@@ -1,34 +1,16 @@
 [
-  {
-    "id": 101,
-    "title": "Amb amor, Simón",
-    "excerpt": "Simón és un adolescent que guarda un secret: és gai. Mentre descobreix la seva veritable identitat es veu obligat a dir la seva veritat i aprèn no sols sobre ell mateix, sinó també sobre la importància de cuidar els afectes.",
-    "edad": "13+",
-    "duracion": "1h 50m",
-    "bloque": "recomanacions",
-    "puntuacion": 85,
-    "poster": "assets/posters/amb-amor-simon.jpg",
-    "tags": ["adolescència", "xarxessocials", "ltgbIQ+", "internet"],
-    "ambits": ["Sociologia", "Igualtat de gènere", "LGTBI+", "Desigualtat", "Discriminació i violència", "Món digital"],
-    "valoracio": {
-      "ludic": 3,
-      "cultural": 4,
-      "educatiu": 5,
-      "artistic": 3
-    },
-    "link": "#"
-  },
+  
   {
     "id": 102,
     "title": "Tot ahhora a tot arreu",
-    "excerpt": "Una dona es veu arrossegada a una aventura interdimensional en la qual només ella pot salvar el multivers.",
-    "edad": "15+",
+    "excerpt": "Una dona es veu arrossegada a una aventura interdimensional en la qual nom?s ella pot salvar el multivers.",
+    "edad": "15+ anys",
     "duracion": "2h 19m",
-    "bloque": "recomanacions",
+    "bloque": "recomanació",
     "puntuacion": 92,
-    "poster": "assets/posters/tot-arreu.jpg",
+    "poster": "img/img.jpg",
     "tags": ["arts marcials", "feminisme", "multivers", "xina"],
-    "ambits": ["Família", "Identitat", "Acció", "Multivers"],
+    "ambits": ["Fam??lia", "Identitat", "Acci??", "Multivers"],
     "valoracio": {
       "ludic": 5,
       "cultural": 4,
@@ -41,12 +23,12 @@
     "id": 103,
     "title": "Tothom parla de Jamie",
     "excerpt": "Un adolescent somia convertir-se en drag queen i ha d'enfrontar-se a prejudicis socials i familiars.",
-    "edad": "15+",
+    "edad": "15+ anys",
     "duracion": "1h 55m",
-    "bloque": "recomanacions",
+    "bloque": "recomanació",
     "puntuacion": 78,
-    "poster": "assets/posters/jamie.jpg",
-    "tags": ["dragqueen", "biografia", "musical", "adolescència"],
+    "poster": "img/img2.jpg",
+    "tags": ["dragqueen", "biografia", "musical", "adolesc??ncia"],
     "ambits": ["Diversitat", "Expressió artística", "Adolescència", "Inclusió"],
     "valoracio": {
       "ludic": 4,

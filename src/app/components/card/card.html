@@ -1,0 +1,17 @@
+<article class="card movie-card shadow-sm border-0 rounded-4 overflow-hidden position-relative">
+  <div class="movie-media">
+    @if (pelicula.poster) {
+      <img [ngSrc]="pelicula.poster" width="600" height="400"
+           class="movie-img" [alt]="pelicula.title" />
+    } 
+    <span class="badge edad-pill bg-light text-dark position-absolute top-0 end-0 m-3 fs-6 rounded-2 px-3 py-3 fw-bold">
+      {{ pelicula.edad }}
+    </span>
+
+    @if (pelicula.bloque) {
+      <span class="badge badge-bg rounded-1 text-uppercase position-absolute top-0 start-0 m-3 px-3 py-2">
+        RECOMANACIÓ
+      </span>
+    }
+  </div>
+</article>
