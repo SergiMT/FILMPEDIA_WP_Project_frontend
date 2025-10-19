@@ -9,27 +9,28 @@
     <h5 class="fw-normal fs-3">Films que et recomanem per a tractar el tema</h5>
   </div>
 
-  <div class="card bg-card border-0 py-4 px-4">
+  <div class="card bg-card border-0 py-4 px-4 position-relative overflow-hidden">
     <span
-      class="z-3 bg-light text-dark position-absolute top-0 end-0 m-3 rounded-1 px-2 py-2 fw-bold"
+      class="z-3 bg-light text-dark position-absolute top-0 end-0 m-3 rounded-2 px-2 py-2 fw-bold"
     >
       13+ anys
     </span>
+
     <div class="card-body">
-      <span class="text-bg-primary badge text-light rounded-1 my-2">RECOMANACIÓ</span>
-      <h5 class="card-title text-light card-movie-title fs-1 w-25">Amb amor, Simón</h5>
-      <h6 class="text-light card-subtitle mb-2 w-25 mb-4">
+      <span class="text-bg-primary badge text-light rounded-1 my-2 text-uppercase">RECOMANACIÓ</span>
+      <h5 class="card-title text-light card-movie-title fs-1 mb-3 mb-lg-4 w-25">Amb amor, Simón</h5>
+      <h6 class="text-light card-subtitle mb-3 mb-lg-4 text-break">
         #adolescència #xarxessocials #lgtbiq+ #internet
       </h6>
-      <p class="card-text text-light w-50">
+      <p class="card-text text-light mb-0 w-50">
         Simón és un adolescent que guarda un secret: és gai. Mentre descobreix la seva veritable
         identitat es veu obligat a dir la seva veritat i aprèn no sols sobre ell mateix, sinó també
         sobre la importància de cuidar als afectes.
       </p>
 
-      <div class="row g-4 align-items-start">
-        <div class="col-12 col-lg-3 w-25">
-          <div class="d-flex align-items-center gap-2 mb-2">
+      <div class="row gy-4 gx-md-4 align-items-start mt-4">
+        <div class="col-12 col-md-6 col-xl-3">
+          <div class="d-flex align-items-center gap-2 mb-3">
             <span class="fw-normal text-light small">VALORACIÓ</span>
             <button
               type="button"
@@ -42,33 +43,33 @@
           </div>
 
           <div class="d-flex align-items-center gap-3 mb-2">
-            <span class="w-25 text-white small">Lúdic</span>
+            <span class="text-white small flex-shrink-0 stat-label">Lúdic</span>
             <div class="progress flex-grow-1 reco-progress">
               <div class="progress-bar reco-bar" style="width: 65%"></div>
             </div>
           </div>
           <div class="d-flex align-items-center gap-3 mb-2">
-            <span class="w-25 text-white small">Cultural</span>
+            <span class="text-white small flex-shrink-0 stat-label">Cultural</span>
             <div class="progress flex-grow-1 reco-progress">
               <div class="progress-bar reco-bar" style="width: 80%"></div>
             </div>
           </div>
           <div class="d-flex align-items-center gap-3 mb-2">
-            <span class="w-25 text-white small">Educatiu</span>
+            <span class="text-white small flex-shrink-0 stat-label">Educatiu</span>
             <div class="progress flex-grow-1 reco-progress">
               <div class="progress-bar reco-bar" style="width: 90%"></div>
             </div>
           </div>
           <div class="d-flex align-items-center gap-3">
-            <span class="w-25 text-white small">Artístic</span>
+            <span class="text-white small flex-shrink-0 stat-label">Artístic</span>
             <div class="progress flex-grow-1 reco-progress">
               <div class="progress-bar reco-bar" style="width: 55%"></div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="fw-normal text-light letterspace-1 mb-2">ÀMBITS</div>
-          <div class="row row-cols-2 text-light small">
+        <div class="col-12 col-md-3">
+          <div class="fw-normal text-light letterspace-1 mb-3 text-uppercase">ÀMBITS</div>
+          <div class="row row-cols-1 row-cols-sm-2 gy-2 text-light small">
             <div class="col">Sociologia</div>
             <div class="col">Discriminació i violència</div>
             <div class="col">Igualtat de gènere</div>
@@ -81,10 +82,11 @@
       </div>
     </div>
   </div>
-  <div class="row my-4">
+
+  <div class="row g-4 my-2">
     @for (item of items(); track item.id) {
-    <div class="col">
-      <app-card [pelicula]="item"></app-card>
+    <div class="col-12 col-sm-6 col-lg-4 col-xl-6 d-flex">
+      <app-card class="w-100 h-100 flex-grow-1" [pelicula]="item"></app-card>
     </div>
     }
   </div>

@@ -58,7 +58,12 @@
   font-family: 'Cooper Black', sans-serif;
   line-height: 1;
 }
+
 .bg-card .card-body > * {
   position: relative;
   z-index: 1;
+}
+
+.stat-label {
+  min-width: 4.5rem;
 }
