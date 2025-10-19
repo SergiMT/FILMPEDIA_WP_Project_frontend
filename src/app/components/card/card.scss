@@ -5,8 +5,9 @@
   background-position: center;
   color: #fff;
 
-  /* estado inicial (solo título/tags) */
+  /* estado inicial (solo titulo/tags) */
   .idle-content{ transition: opacity .25s ease, transform .25s ease; }
+  .card-meta{ transition: opacity .25s ease, transform .25s ease; }
 
   /* overlay invisible */
   .hover-overlay{
@@ -16,8 +17,6 @@
                 linear-gradient(0deg, rgba(0,0,0,.15), rgba(0,0,0,.15));
     opacity: 0;
     transition: opacity .25s ease;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
   }
 
   /* contenido del hover oculto */
@@ -33,7 +32,7 @@
   .mini-bar{ background:linear-gradient(90deg,#eb705a 0%, #eb705a 55%, #eb705a 100%); border-radius:999px; }
   .label-col{ min-width: 5.5rem; }
 
-  /* píldora edad tipo glass */
+  /* pildora edad tipo glass */
   .age-pill{
     background: rgba(255,255,255,.92);
     border: 1px solid rgba(0,0,0,.06);
@@ -54,7 +53,10 @@
 
   &:hover .idle-content,
   &:focus-within .idle-content,
-  &.is-active .idle-content{
+  &.is-active .idle-content,
+  &:hover .card-meta,
+  &:focus-within .card-meta,
+  &.is-active .card-meta{
     opacity:0; transform: translateY(-6px);
   }
 }
@@ -63,3 +65,5 @@
 @media (max-width: 767.98px){
   .card.movie-card{ height: 440px; }
 }
+
+

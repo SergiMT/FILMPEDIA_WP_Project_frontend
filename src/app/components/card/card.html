@@ -2,7 +2,7 @@
          [style.background-image]="pelicula.poster ? 'url(' + pelicula.poster + ')' : 'none'"
          tabindex="0">
 
-  <div class="d-flex justify-content-between align-items-start px-3 px-md-4 pt-3 position-relative z-2">
+  <div class="card-meta d-flex justify-content-between align-items-start px-3 px-md-4 pt-3 position-relative z-2">
     @if (pelicula.bloque) {
       <span class="badge text-bg-primary text-light text-uppercase rounded-1 px-3 py-2 fw-semibold">
         {{ pelicula.bloque }}
@@ -16,7 +16,7 @@
   <div class="idle-content text-light px-3 px-md-4 pt-2 position-relative my-5">
     <h3 class="card-title fst-italic fs-1 fw-normal">{{ pelicula.title }}</h3>
     <p class="card-subtitle mt-2">
-      @if (pelicula.tags?.length) {
+      @if (pelicula.tags.length) {
         @for (t of pelicula.tags; track t) { {{ t }} }
       }
     </p>
@@ -57,3 +57,4 @@
     </div>
   </div> 
 </article>
+
