@@ -1,28 +1,22 @@
 [
-  
   {
     "id": 102,
     "title": "Tot alhora a tot arreu",
-    "excerpt": "Una dona es veu arrossegada a una aventura interdimensional en la qual nom?s ella pot salvar el multivers.",
+    "excerpt": "Una dona es veu arrossegada a una aventura interdimensional en la qual només ella pot salvar el multivers.",
     "edad": "15+ anys",
     "duracion": "2h 19m",
     "bloque": "RECOMANACIÓ",
     "puntuacion": 92,
     "poster": "img/img.jpg",
-    "tags": ["#arts marcials", "#feminisme", "#multivers", "#xina"],
-    "ambits": ["Fam??lia", "Identitat", "Acci??", "Multivers"],
-    "valoracio": {
-      "ludic": 5,
-      "cultural": 4,
-      "educatiu": 3,
-      "artistic": 5
-    },
+    "tags": ["#artsmarcials", "#feminisme", "#multivers", "#xina"],
+    "ambits": ["Família", "Identitat", "Acció", "Multivers"],
+    "valoracio": { "ludic": 5, "cultural": 4, "educatiu": 3, "artistic": 5 },
     "link": "#"
   },
   {
     "id": 103,
     "title": "Tothom parla de Jamie",
-    "excerpt": "Un adolescent somia convertir-se en drag queen i ha d'enfrontar-se a prejudicis socials i familiars.",
+    "excerpt": "Jamie té 16 anys i no sap com afrontar els canvis que li presenta la vida. Gràcies al suport incondicional de la seva mare i els seus veritables amics podrà vèncer els prejudicis de la societat i ser drag queen.",
     "edad": "15+ anys",
     "duracion": "1h 55m",
     "bloque": "RECOMANACIÓ",
@@ -30,12 +24,7 @@
     "poster": "img/img2.jpg",
     "tags": ["#dragqueen", "#biografia", "#musical", "#adolescència"],
     "ambits": ["Diversitat", "Expressió artística", "Adolescència", "Inclusió"],
-    "valoracio": {
-      "ludic": 4,
-      "cultural": 3,
-      "educatiu": 4,
-      "artistic": 5
-    },
+    "valoracio": { "ludic": 4, "cultural": 3, "educatiu": 4, "artistic": 5 },
     "link": "#"
   }
 ]
