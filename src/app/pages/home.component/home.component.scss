@@ -1,9 +1,64 @@
-.bg-card{
-    background-image: url("../../../../public/img/fons1.jpg");
-    background-position:center;
+//HEADER
+.section-header {
+  --accent: #eb705a;
+  --dark-line: #111;
+  --light-line: #999999;
+  --accent-len: 160px;
+  --line-h: 3px;
+  position: relative;
+  padding-bottom: 0.5rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--line-h);
+    background: linear-gradient(
+      to right,
+      var(--dark-line) 0 var(--accent-len),
+      var(--light-line) var(--accent-len) 100%
+    );
+    border-radius: 999px;
+  }
 }
 
-.card-movie-title{
-font-family: 'Cooper Black', sans-serif;
-line-height: 1;
+.badge-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0.2rem;
+  background: var(--accent);
+  display: inline-block;
+}
+
+//MAIN CARD
+
+.bg-card .card-body::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0) 75%
+  );
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 12px;
+}
+
+.bg-card {
+  background-image: url('../../../../public/img/fons1.jpg');
+  background-position: center;
+}
+
+.card-movie-title {
+  font-family: 'Cooper Black', sans-serif;
+  line-height: 1;
+}
+.bg-card .card-body > * {
+  position: relative;
+  z-index: 1;
 }

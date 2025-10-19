@@ -1,17 +1,17 @@
-<article class="card movie-card shadow-sm border-0 rounded-4 overflow-hidden position-relative">
-  <div class="movie-media">
-    @if (pelicula.poster) {
-      <img [ngSrc]="pelicula.poster" width="600" height="400"
-           class="movie-img" [alt]="pelicula.title" />
-    } 
-    <span class="badge edad-pill bg-light text-dark position-absolute top-0 end-0 m-3 fs-6 rounded-2 px-3 py-3 fw-bold">
-      {{ pelicula.edad }}
+<div class="card" style="">
+  <div class="row justify-content-between px-4 py-3">
+    <div class="col col-2 badge text-bg-primary text-light rounded-1">RECOMANACIÓ</div>
+    <span
+      class="bg-light text-dark rounded-1 fw-bold col col-2"
+    >
+      13+ anys
     </span>
-
-    @if (pelicula.bloque) {
-      <span class="badge badge-bg rounded-1 text-uppercase position-absolute top-0 start-0 m-3 px-3 py-2">
-        RECOMANACIÓ
-      </span>
-    }
   </div>
-</article>
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+    <p class="card-text">
+      Some quick example text to build on the card title and make up the bulk of the card’s content.
+    </p>
+  </div>
+</div>
