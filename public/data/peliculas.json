@@ -2,14 +2,14 @@
   
   {
     "id": 102,
-    "title": "Tot ahhora a tot arreu",
+    "title": "Tot alhora a tot arreu",
     "excerpt": "Una dona es veu arrossegada a una aventura interdimensional en la qual nom?s ella pot salvar el multivers.",
     "edad": "15+ anys",
     "duracion": "2h 19m",
-    "bloque": "recomanació",
+    "bloque": "RECOMANACIÓ",
     "puntuacion": 92,
     "poster": "img/img.jpg",
-    "tags": ["arts marcials", "feminisme", "multivers", "xina"],
+    "tags": ["#arts marcials", "#feminisme", "#multivers", "#xina"],
     "ambits": ["Fam??lia", "Identitat", "Acci??", "Multivers"],
     "valoracio": {
       "ludic": 5,
@@ -25,10 +25,10 @@
     "excerpt": "Un adolescent somia convertir-se en drag queen i ha d'enfrontar-se a prejudicis socials i familiars.",
     "edad": "15+ anys",
     "duracion": "1h 55m",
-    "bloque": "recomanació",
+    "bloque": "RECOMANACIÓ",
     "puntuacion": 78,
     "poster": "img/img2.jpg",
-    "tags": ["dragqueen", "biografia", "musical", "adolesc??ncia"],
+    "tags": ["#dragqueen", "#biografia", "#musical", "#adolescència"],
     "ambits": ["Diversitat", "Expressió artística", "Adolescència", "Inclusió"],
     "valoracio": {
       "ludic": 4,

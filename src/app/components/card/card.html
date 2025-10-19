@@ -1,17 +1,14 @@
-<div class="card" style="">
-  <div class="row justify-content-between px-4 py-3">
-    <div class="col col-2 badge text-bg-primary text-light rounded-1">RECOMANACIÓ</div>
+<div class='card card-bg' [style.background-image]="pelicula.poster ? 'url(' + pelicula.poster + ')' : 'none'">
+  <div class='row justify-content-between px-4 py-3'>
+    <div class='col col-2 badge text-bg-primary text-light rounded-1'>{{pelicula.bloque}}</div>
     <span
-      class="bg-light text-dark rounded-1 fw-bold col col-2"
+      class='bg-light text-dark rounded-1 fw-bold col col-2'
     >
-      13+ anys
+      {{pelicula.edad}}
     </span>
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-    <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of the card’s content.
-    </p>
+  <div class='card-body text-light my-5'>
+    <h5 class='card-title fst-italic fs-1 fw-normal w-25'>{{pelicula.title}}</h5>
+    <h6 class='card-subtitle mt-5'>{{pelicula.tags}}</h6>
   </div>
 </div>
