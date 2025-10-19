@@ -8,7 +8,7 @@ import { Pelicula } from '../../models/pelicula';
   standalone: true,
   imports: [Card],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   private readonly http = inject(HttpClient);
@@ -18,7 +18,7 @@ export class HomeComponent {
   constructor() {
     this.http.get<Pelicula[]>('data/peliculas.json').subscribe({
       next: (peliculas) => this.peliculas.set(peliculas),
-      error: (error) => console.error('No se pudo cargar el listado de peliculas', error)
+      error: (error) => console.error('No se pudo cargar el listado de peliculas', error),
     });
   }
 }
