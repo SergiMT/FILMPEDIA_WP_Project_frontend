@@ -1,3 +1,23 @@
+<!-- <div class="card" [style.background-image]="pelicula.poster ? 'url(' + pelicula.poster + ')' : 'none'">
+  <div class="card-content">
+    <div class="card-meta">
+      <span class="card-badge" >{{ pelicula.bloque | titlecase }}</span>
+      <span class="card-age" >{{ pelicula.edad }}</span>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ pelicula.title }}</h5>
+      <h6 class="card-subtitle">{{ pelicula.duracion }}</h6>
+      <p class="card-text" >
+        {{ pelicula.tags.join(' ') }}
+      </p>
+    </div>
+  </div>
+  <div class="card-excerpt">
+    <p>{{ pelicula.excerpt }}</p>
+  </div>
+</div> -->
+
+
 <div class='card card-bg' [style.background-image]="pelicula.poster ? 'url(' + pelicula.poster + ')' : 'none'">
   <div class='row justify-content-between px-4 py-3'>
     <div class='col col-2 badge text-bg-primary text-light rounded-1'>{{pelicula.bloque}}</div>
@@ -10,5 +30,8 @@
   <div class='card-body text-light my-5'>
     <h5 class='card-title fst-italic fs-1 fw-normal w-25'>{{pelicula.title}}</h5>
     <h6 class='card-subtitle mt-5'>{{pelicula.tags}}</h6>
+  </div>
+  <div class="card-excerpt text-light">
+    <p>{{ pelicula.excerpt }}</p>
   </div>
 </div>

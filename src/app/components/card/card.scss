@@ -1,6 +1,59 @@
-.card-bg {
+.card {
+  position: relative;
   height: 600px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-excerpt {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 3;
+}
+
+.card-excerpt p {
+  margin: 0;
+  width: min(70%, 28rem);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.card:hover::after {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.card:hover .card-content {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+.card:hover .card-excerpt {
+  opacity: 1;
+  transform: translateY(0);
 }
