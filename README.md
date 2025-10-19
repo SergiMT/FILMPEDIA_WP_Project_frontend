@@ -1,59 +1,73 @@
-# FILMPEDIAWPProjectFrontend
+# FILMPEDIA PRUEBA TÉCNICA WIKI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+## 🏁 Inicio / Visión general
+- **Tecnologías principales:**
+  - Angular 20
+  - SSR opcional (Angular Universal)
+  - Bootstrap 5
+- **Capturas destacadas:**
+<img width="1902" height="681" alt="image" src="https://github.com/user-attachments/assets/e14421c7-7035-483d-b2bb-3e99a27c461a" />
+<img width="1897" height="626" alt="image" src="https://github.com/user-attachments/assets/b650d264-2c7e-402e-8700-6e104e3be86d" />
+<img width="665" height="612" alt="image" src="https://github.com/user-attachments/assets/8b82dee1-6fbf-4177-a8d1-b229b49a37a7" />
 
-## Development server
+## 📝 Notas
+- **Aprendizajes clave:**
+  - Profundización en componentes standalone y signals para manejar estado reactivo sin Zone.js.
+  - Configuración de estilos globales con Bootstrap 5 usando `@use` y capas personalizadas.
+- **Retos destacados:**
+  - Ajuste de tarjetas para conservar accesibilidad en estados hover/focus en SSR y CSR.
+  - Optimización de cargas SSR manteniendo coherencia con prerender y datos estáticos.
+- **Integración con WordPress + ACF + CPT:**
+  - Exponer un Custom Post Type "película" con campos definidos en Advanced Custom Fields (título, sinopsis, valoración, imagen, tags).
+  - Consumir la API REST de WordPress (`/wp-json/wp/v2/peliculas`) desde Angular y mapear al modelo `Pelicula`.
+  - Automatizar despliegues sincronizando los datos estáticos con el CPT o incorporando webhooks para actualizaciones en tiempo real.
 
-To start a local development server, run:
+## ⚙️ Guía de instalación y ejecución
+1. **Requisitos previos**
+   - Node.js 18+
+   - Angular CLI (opcional)
+2. **Instalación**
+   ```bash
+   npm install
+   ```
+3. **Servidor de desarrollo**
+   ```bash
+   npm run start
+   ```
+   - URL por defecto: [http://localhost:4200/](http://localhost:4200/)
 
-```bash
-ng serve
-```
+## 🧱 Arquitectura de la aplicación
+- **Árbol `src/app`:** _(añadir diagrama o listado)_
+- **Bootstrap de la app:** `main.ts`, `app.config.ts`
+- **Standalone components** y `provideZonelessChangeDetection`
+- **Rutas SPA:** `app.routes.ts`
+- **Rutas SSR / Prerender:** `app.routes.server.ts`
+- **Configuración Universal:** `app.config.server.ts`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🧩 Componentes y páginas
+### AppComponent
+- Rol y responsabilidades
+- Uso de `router-outlet`
+- Signals relevantes
 
-## Code scaffolding
+### HomeComponent
+- Fuente de datos (`HttpClient` + JSON estático)
+- Estructura de iteración (`@for`)
+- Enlaces a componentes hijos
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### CardComponent
+- Inputs (`@Input`) requeridos
+- Cálculo de valoraciones
+- Estados hover/focus y accesibilidad
+- Estilos (`card.component.scss`)
 
-```bash
-ng generate component component-name
-```
+## 📊 Modelos y datos
+- Interfaces principales (`Pelicula`, `Valoracio`)
+- Ubicación del dataset: `public/data/peliculas.json`
+- Notas para reemplazar con API real
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🎨 Estilos y recursos
+- Configuración global en `src/styles.scss`
+- Uso de Bootstrap vía `@use`
+- Convenciones SCSS (BEM, utilidades)
+- Personalización de paleta, sombras, radios
